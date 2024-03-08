@@ -175,9 +175,10 @@ class singlyLinkedList {
 public class sll {
     public static node head;
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
          Scanner sc=new Scanner(System.in);
-            int n,val,pos,c=0;
+            int n,val,pos;
             singlyLinkedList sll= new singlyLinkedList();
             singlyLinkedList sll1= new singlyLinkedList();
             do{

@@ -97,6 +97,8 @@ class circularSinglyLinkedList{
 
 
 public class scll {
+    
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
             int n,val,pos;

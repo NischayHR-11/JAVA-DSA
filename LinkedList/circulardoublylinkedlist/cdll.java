@@ -131,6 +131,8 @@ class circulardoublylinkedlist{
 }
 
 public class cdll {
+    
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
          circulardoublylinkedlist dll=new circulardoublylinkedlist();
                  Scanner sc=new Scanner(System.in);

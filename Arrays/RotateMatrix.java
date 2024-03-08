@@ -23,8 +23,6 @@ public class RotateMatrix {
         }
     }
     public static void main(String[] args) {
-
-        int n=5;
         int arr[][]={{84,85,86},{87,85,90},{85,83,23}};
        System.out.println("BEFORE ROTATION :");
        for(int i=0;i<arr.length;i++){

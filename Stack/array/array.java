@@ -1,4 +1,4 @@
-package Stacks.array;
+package Stack.array;
 class stack{
     private int arr[];
     private int topofstack;

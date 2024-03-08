@@ -1,4 +1,4 @@
-package Stacks.linkedlist;
+package Stack.linkedlist;
 
 class node{
     public int val;

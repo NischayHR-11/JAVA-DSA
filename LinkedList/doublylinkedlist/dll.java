@@ -122,6 +122,8 @@ class doublylinkedlist{
 
 
 public class dll {
+    
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         doublylinkedlist dll=new doublylinkedlist();
                  Scanner sc=new Scanner(System.in);

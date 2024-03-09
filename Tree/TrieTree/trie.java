@@ -88,7 +88,7 @@ class Tree{
         }
     }
 
-    void delete(String word){
+    public void delete(String word){
         if(Search(word)){
             delete(root, word, 0);
         }else{

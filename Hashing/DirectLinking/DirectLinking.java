@@ -3,7 +3,8 @@ import java.util.Scanner;
 import java.util.LinkedList;
 
 class DL{
-    public LinkedList<String>HashTable[];
+    
+    private LinkedList<String>HashTable[];
 
     public DL(int n){
         HashTable=new LinkedList[n];

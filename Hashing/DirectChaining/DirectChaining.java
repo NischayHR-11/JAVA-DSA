@@ -1,4 +1,4 @@
-package Hashing.DirectLinking;
+package Hashing.DirectChaining;
 import java.util.Scanner;
 import java.util.LinkedList;
 
@@ -58,7 +58,7 @@ class DL{
     }
 }
 
-public class DirectLinking {
+public class DirectChaining {
     public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);

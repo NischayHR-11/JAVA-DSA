@@ -78,7 +78,25 @@ class QP{
         }
         System.out.println(word+" NOT FOUND IN THE HASH TABLE !!");
         return false;
+    }
 
+    public void delete(String word){
+        if(search(word)){
+            int index =HashFunction(word);
+            int count=0;
+            for(int i=index;i<index+HashTable.length;i++){
+                int newindex=(index+count*count)%HashTable.length;
+                if(HashTable[newindex]!=null && HashTable[newindex]==word){
+                    HashTable[newindex]=null;
+                    System.out.println(word+" IS SUCCESSFULLY DELETED..");
+                    return;
+                }
+                count++;
+            }
+            System.out.println(word +" NOT FOUND IN THE HASH TABLE !!");
+        }else{
+            System.out.println(word +" NOT FOUND IN THE HASH TABLE !!");
+        }
     }
 }
 
@@ -92,7 +110,8 @@ public class QuadraticProbing {
         QuadraticProbing.insert("I");
          QuadraticProbing.insert("AM");
         QuadraticProbing.display();
-        QuadraticProbing.search("Q");
+        QuadraticProbing.delete("Q");
+        QuadraticProbing.display();
 
     }
 }

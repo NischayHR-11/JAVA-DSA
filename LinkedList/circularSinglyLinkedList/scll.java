@@ -47,11 +47,13 @@ class circularSinglyLinkedList{
         size++;
     }
 
+    @SuppressWarnings("unused")
+    
     public void display(){
-        nodes cur=head;int i=0;
+        nodes cur=head;int j=0;
         while(cur.next!=head){
             System.out.print(cur.value+"->");
-            cur=cur.next;i++;
+            cur=cur.next;j++;
         }
         System.out.print(cur.value);
     }

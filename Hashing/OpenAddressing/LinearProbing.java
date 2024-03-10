@@ -63,20 +63,37 @@ class LP{
         UsedWords++;
     }
 
-    public void search(String word){
+    public boolean search(String word){
         int indx=HashFunction(word);
         if(HashTable[indx]==null){
             System.out.println("ELEMENT NOT FOUND IN HASH TABLE.. ");
-            return;
+            return false;
         }
         for(int i=indx;i<indx+HashTable.length;i++){
             int newindx=i%HashTable.length;
             if(HashTable[newindx]!=null && HashTable[newindx]==word){
                 System.out.println("ELEMENT FOUND AT "+newindx+" INDEX");
-                return;
+                return true;
             }
         }
         System.out.println("ELEMENT NOT FOUND IN HASH TABLE ");
+        return false;
+    }
+
+    public void delete(String word){
+        if(search(word)){
+            int indx=HashFunction(word);
+            for(int i=0;i<indx+HashTable.length;i++){
+                int newindx=i%HashTable.length;
+                if(HashTable[newindx]!=null && HashTable[newindx]==word){
+                    HashTable[newindx]=null;
+                    System.out.println("ELEMENT DELETED SUCCESSFULLY...");
+                    return;
+                }
+            }
+        }else{
+            System.out.println("ELEMENT NOT FOUND IN THE HASH TABLE !!");
+        }
     }
 
     public void display(){
@@ -104,6 +121,8 @@ public class LinearProbing {
         LinearProbing.insert("WELCOME");
         LinearProbing.display();
         LinearProbing.search("ytf");
+        LinearProbing.delete("WELCOME");
+        LinearProbing.display();
 
     }
 }

@@ -180,7 +180,7 @@ public class sll {
          Scanner sc=new Scanner(System.in);
             int n,val,pos;
             singlyLinkedList sll= new singlyLinkedList();
-            singlyLinkedList sll1= new singlyLinkedList();
+            // singlyLinkedList sll1= new singlyLinkedList();
             do{
             System.out.println("------------------------------------- MENU -----------------------------------");
             System.out.println("1.CREATE SINGLY LINKED LIST");

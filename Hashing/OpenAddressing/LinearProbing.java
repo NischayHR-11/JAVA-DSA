@@ -63,6 +63,22 @@ class LP{
         UsedWords++;
     }
 
+    public void search(String word){
+        int indx=HashFunction(word);
+        if(HashTable[indx]==null){
+            System.out.println("ELEMENT NOT FOUND IN HASH TABLE.. ");
+            return;
+        }
+        for(int i=indx;i<indx+HashTable.length;i++){
+            int newindx=i%HashTable.length;
+            if(HashTable[newindx]!=null && HashTable[newindx]==word){
+                System.out.println("ELEMENT FOUND AT "+newindx+" INDEX");
+                return;
+            }
+        }
+        System.out.println("ELEMENT NOT FOUND IN HASH TABLE ");
+    }
+
     public void display(){
 
         System.out.println("------------------ HASH TABLE -----------------");
@@ -78,15 +94,16 @@ public class LinearProbing {
         
         LP LinearProbing=new LP(10);
         LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
-        LinearProbing.insert("HI");
+        LinearProbing.insert("HELLO");
+        LinearProbing.insert("I");
+        LinearProbing.insert("AM");
+        LinearProbing.insert("NISCHAY");
+        LinearProbing.insert("H R");
+        LinearProbing.insert("FROM");
+        LinearProbing.insert("RAMANAGARA");
+        LinearProbing.insert("WELCOME");
         LinearProbing.display();
+        LinearProbing.search("ytf");
 
     }
 }

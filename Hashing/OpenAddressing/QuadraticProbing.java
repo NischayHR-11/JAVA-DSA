@@ -23,8 +23,34 @@ class QP{
     }
 
     public void ReHash(String word){
-        
+        ArrayList<String>a=new ArrayList<>();
+        for(String s :HashTable){
+            a.add(s);
+        }
+        a.add(word);
+        HashTable=new String[2*HashTable.length];
+        for(String s:a){
+            insert(s);
+        }
     }
+
+    public void insert(String word){
+        if(LoadFactor()>=.75){
+            ReHash(word);
+        }else{
+            int index=HashFunction(word);
+            int count=0;
+            for(int i=index;i<index+HashTable.length;i++){
+                int newindex=(i%HashTable.length)+(count*count);
+                if(HashTable[newindex]==null){
+                    HashTable[newindex]=word;
+                    System.out.println("ELEMENT INSERTED SUCCESSFULLY..");
+                    return;
+                }
+            }
+        }
+    }
+    
 }
 
 public class QuadraticProbing {

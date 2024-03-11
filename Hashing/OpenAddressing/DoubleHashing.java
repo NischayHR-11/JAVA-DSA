@@ -58,7 +58,7 @@ class DH{
 
                 if(HashTable[newindex]==null){
                     HashTable[newindex]=word;
-                    System.out.println(word+" IS SUCCESSFULLY INSERTED AT INDEX :"+newindex);
+                    System.out.println("["+word+"]  IS SUCCESSFULLY INSERTED AT INDEX :"+newindex);
                     break;
                 }
             }
@@ -67,11 +67,48 @@ class DH{
 
     }
 
+    public boolean search(String word){
+        int x=HashFunction1(word);
+        int y=HashFunction2(word);
+
+        if(HashTable[x]==null){
+            System.out.println(word +" NOT PRESENT IN THE HASH TABLE !!");
+            return false;
+        }
+        for(int i=0;i<HashTable.length;i++){
+            int newindex=(x+i*y)%HashTable.length;
+            if(HashTable[newindex]!=null && HashTable[newindex]==word){
+                System.out.println(word +" FOUND IN HASH TABLE AT INDEX : "+newindex);
+                return true;
+            }
+        }
+        System.out.println(word +" NOT PRESENT IN THE HASH TABLE !!");
+        return false;
+    }
+
+    public void delete(String word){
+        if(search(word)){
+            int x=HashFunction1(word);
+            int y=HashFunction2(word);
+            for(int i=0;i<HashTable.length;i++){
+                int newindex=(x+i*y)%HashTable.length;
+                if(HashTable[newindex]!=null && HashTable[newindex]==word){
+                    HashTable[newindex]=null;
+                    System.out.println(word +" AT INDEX : "+newindex+" IS SUCCESSFULLY DELETED ..");
+                    return;
+                }
+            }
+        }else{
+            System.out.println(word+" IS NOT PRESENT IN THE HASH TABLE !!");
+        }
+    }
+
     public void display(){
         System.out.println("-------------------- HASH TABLE ------------------");
         for(int i=0;i<HashTable.length;i++){
             System.out.println("INDEX : "+i+" , "+" KEY : "+HashTable[i]);
         }
+        System.out.println("--------------------------------------------------");
     }
 }
 
@@ -81,16 +118,16 @@ public class DoubleHashing {
         DoubleHashing.insert("HI");
         DoubleHashing.insert("Hello");
         DoubleHashing.insert("EVERY ONE");
-        DoubleHashing.insert("HI");
+        DoubleHashing.insert("GJ");
         DoubleHashing.insert("I");
         DoubleHashing.insert("AM");
         DoubleHashing.insert("NISCHAY H R");
         DoubleHashing.insert("WELCOME");
-        // DoubleHashing.Search("NISCHAY H R");
         DoubleHashing.display();
-    //     DoubleHashing.delete("HI");
-    //     DoubleHashing.display();
-    //     DoubleHashing.Search("HI");
+        DoubleHashing.search("GJ");
+        DoubleHashing.delete("GJ");
+        DoubleHashing.display();
+        DoubleHashing.search("GJ");
     }
     
 }

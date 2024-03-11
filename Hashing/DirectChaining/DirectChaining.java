@@ -6,6 +6,7 @@ class DL{
     
     private LinkedList<String>HashTable[];
 
+    @SuppressWarnings("unchecked")
     public DL(int n){
         HashTable=new LinkedList[n];
     }
@@ -59,6 +60,7 @@ class DL{
 }
 
 public class DirectChaining {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);

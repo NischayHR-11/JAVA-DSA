@@ -1,6 +1,6 @@
 package SortingAlgorithms.InPlaceSorting.QuickSort;
 
-// Time Complexity Average time : O(nlog(n));  worst case : O(n^2);{If Povit Is Smallest Or Largest Element In Data Structure}
+// Time Complexity Average time : O(nlog(n));  worst case : O(n^2);{If pivot Is Smallest Or Largest Element In Data Structure}
 
 // Space Complexity : O(1);
 
@@ -11,11 +11,11 @@ public class QuickSort {
 
     public static int partition(int a[],int si,int ei){
 
-        int povit=a[ei];
+        int pivot=a[ei];
         int i=si-1;
 
         for(int j=si;j<ei;j++){
-            if(a[j]<povit){
+            if(a[j]<pivot){
                 i++;
                 int temp=a[i];
                 a[i]=a[j];
@@ -35,10 +35,10 @@ public class QuickSort {
 
         if(si<ei){
 
-            int povitIndex=partition(a, si, ei);
+            int pivotIndex=partition(a, si, ei);
 
-            QuickSorting(a, si, povitIndex-1);
-            QuickSorting(a, povitIndex+1, ei);
+            QuickSorting(a, si, pivotIndex-1);
+            QuickSorting(a, pivotIndex+1, ei);
         }
 
 

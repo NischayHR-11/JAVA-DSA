@@ -1,5 +1,12 @@
 package SortingAlgorithms.InPlaceSorting.QuickSort;
 
+// Time Complexity Average time : O(nlog(n));  worst case : O(n^2);{If Povit Is Smallest Or Largest Element In Data Structure}
+
+// Space Complexity : O(1);
+
+// InPlace Sorting   And   UnStable Sorting;
+
+
 public class QuickSort {
 
     public static int partition(int a[],int si,int ei){

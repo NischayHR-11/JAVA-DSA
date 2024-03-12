@@ -1,17 +1,17 @@
-package SortingAlgorithms.InSpaceSorting.InsertionSort;
+package SortingAlgorithms.InPlaceSorting.BubbleSort;
 
-public class InsertionSort {
+public class Bubblesort {
 
-    public static void InsertionSorting(int a[]){
-        
-        for(int i=1;i<a.length;i++){
-            int temp=a[i];
-            int j=i;
-            while(j>0 && a[j-1]>temp){
-                a[j]=a[j-1];
-                j--;
+    public static void Bubblesorting(int a[]){
+
+        for(int i=0;i<a.length-1;i++){
+            for(int j=0;j<a.length-1-i;j++){
+                if(a[j]>a[j+1]){
+                    int t=a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=t;
+                }
             }
-            a[j]=temp;
         }
     }
 
@@ -22,13 +22,13 @@ public class InsertionSort {
         }
         System.out.println();
     }
-
+    
     public static void main(String[] args) {
-        
+
         int a[]={7,2,5,1,8,4,6,3};
         System.out.println("Present Array : ");
         display(a);
-        InsertionSorting(a);
+        Bubblesorting(a);
         System.out.println("Sorted Array : ");
         display(a);
     }

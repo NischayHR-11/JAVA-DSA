@@ -1,19 +1,17 @@
-package SortingAlgorithms.InSpaceSorting.SelectionSort;
+package SortingAlgorithms.InPlaceSorting.InsertionSort;
 
-public class SelectionSort {
+public class InsertionSort {
 
-    public static void SelectionSorting(int a[]){
-        for(int i=0;i<a.length-1;i++){
-            int smallest=i;
-
-            for(int j=i+1;j<a.length;j++){
-                if(a[j]<a[smallest]){
-                    smallest=j;
-                }
-            }
+    public static void InsertionSorting(int a[]){
+        
+        for(int i=1;i<a.length;i++){
             int temp=a[i];
-            a[i]=a[smallest];
-            a[smallest]=temp;
+            int j=i;
+            while(j>0 && a[j-1]>temp){
+                a[j]=a[j-1];
+                j--;
+            }
+            a[j]=temp;
         }
     }
 
@@ -30,7 +28,7 @@ public class SelectionSort {
         int a[]={7,2,5,1,8,4,6,3};
         System.out.println("Present Array : ");
         display(a);
-        SelectionSorting(a);
+        InsertionSorting(a);
         System.out.println("Sorted Array : ");
         display(a);
     }

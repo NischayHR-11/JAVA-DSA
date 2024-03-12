@@ -2,6 +2,10 @@ package SortingAlgorithms.OutPlaceSorting.BucketSorting;
 import java.util.ArrayList;
 import java.util.Collections;
 
+// Time Complexity : O(nlog(n));     Space Complexity : O(n);{Use of ArrayList}
+
+// OutPlace Sorting
+
 public class BucketSort {
 
     public static void displayBuckets(ArrayList<Integer>buckets[]){
@@ -13,7 +17,7 @@ public class BucketSort {
 
                 System.out.print(buckets[i].get(j));
             }
-            
+
             System.out.println();
         }
     }

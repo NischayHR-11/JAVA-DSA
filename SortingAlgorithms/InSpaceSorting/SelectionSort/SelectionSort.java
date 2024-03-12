@@ -1,4 +1,4 @@
-package SortingAlgorithms.SelectionSort;
+package SortingAlgorithms.InSpaceSorting.SelectionSort;
 
 public class SelectionSort {
 

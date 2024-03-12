@@ -4,7 +4,7 @@ import java.util.Collections;
 
 // Time Complexity : O(nlog(n));     Space Complexity : O(n);{Use of ArrayList}
 
-// OutPlace Sorting
+// OutPlace Sorting  AND   Stable Sorting
 
 public class BucketSort {
 

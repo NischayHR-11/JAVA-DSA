@@ -1,4 +1,4 @@
-package SortingAlgorithms.BubbleSort;
+package SortingAlgorithms.InSpaceSorting.BubbleSort;
 
 public class Bubblesort {
 

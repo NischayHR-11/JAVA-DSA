@@ -1,5 +1,9 @@
 package SortingAlgorithms.InPlaceSorting.SelectionSort;
 
+// Time Complexity : O(N^2);        Space Complexity : O(1);
+
+// InPlace Sorting  AND Stable Sorting 
+
 public class SelectionSort {
 
     public static void SelectionSorting(int a[]){

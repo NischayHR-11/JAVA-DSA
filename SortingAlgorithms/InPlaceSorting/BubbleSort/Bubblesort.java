@@ -1,5 +1,9 @@
 package SortingAlgorithms.InPlaceSorting.BubbleSort;
 
+// Time Complexity : O(N^2);        Space Complexity : O(1);
+
+// InPlace Sorting  AND Stable Sorting 
+
 public class Bubblesort {
 
     public static void Bubblesorting(int a[]){

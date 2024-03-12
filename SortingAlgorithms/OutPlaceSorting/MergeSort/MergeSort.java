@@ -2,7 +2,7 @@ package SortingAlgorithms.OutPlaceSorting.MergeSort;
 
 // Time Complexity : O(nlogn);     Space Complexity : O(n); {conquer Method}
 
-// OutPlace Sorting  and  UnstableSorting
+// OutPlace Sorting  and  StableSorting
 
 public class MergeSort {
 

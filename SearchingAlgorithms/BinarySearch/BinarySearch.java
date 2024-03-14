@@ -1,9 +1,9 @@
 package SearchingAlgorithms.BinarySearch;
 
-// Time Complexity : O(nlog(n));
+// Time Complexity : O(log(n));
 
 // It Is Only Applicable For Sorted Data Structure.
- 
+
 public class BinarySearch {
 
     public static int BinarySearching(int a[],int key){

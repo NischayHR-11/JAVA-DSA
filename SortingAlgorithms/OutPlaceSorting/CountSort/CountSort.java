@@ -1,9 +1,17 @@
 package SortingAlgorithms.OutPlaceSorting.CountSort;
 
+// Time Complexity : O(n);     Space Complexity : O(n);
+
+// OutPlace Sorting  AND  Stable Sorting
+
+// Draw Backs : 
+// 1. It is Only Applicable For Positive Integers And not Applicable For Floating values.
+// 2. And It is Not Apllicable For Array  which is Having Range Capcity as Square of Capacity of Original Array.
+// 3.It Is Not Efficient Long Range of Elements For Small Capacity of Array. Ex : a[5]={100,200,300,400,500};   
+
 public class CountSort {
 
-
-    public static void CountSorting(int a[]){
+     public static void CountSorting(int a[]){
 
         int b[]=new int[a.length];int count[];
 

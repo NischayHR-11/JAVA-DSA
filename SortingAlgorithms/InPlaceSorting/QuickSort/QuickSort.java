@@ -2,7 +2,7 @@ package SortingAlgorithms.InPlaceSorting.QuickSort;
 
 // Time Complexity Average Cases : O(nlog(n));  worst case : O(n^2);{If pivot Is Smallest Or Largest Element In Data Structure}
 
-// Space Complexity Average Cases : O(nlog(n));  Worst Case : O(n);
+// Space Complexity Average Cases : O(log(n));  Worst Case : O(n);
 
 // InPlace Sorting   And   UnStable Sorting;
 

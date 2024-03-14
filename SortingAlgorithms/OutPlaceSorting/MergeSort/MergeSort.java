@@ -1,6 +1,6 @@
 package SortingAlgorithms.OutPlaceSorting.MergeSort;
 
-// Time Complexity : O(nlogn);     Space Complexity : O(n); {conquer Method}
+// Time Complexity : O(nlogn);     Space Complexity : O(n); {conquer Method = O(log(n)) + Array = O(n)}(dominated)
 
 // OutPlace Sorting  and  StableSorting
 

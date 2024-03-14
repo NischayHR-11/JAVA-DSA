@@ -5,7 +5,7 @@ package SortingAlgorithms.OutPlaceSorting.CountSort;
 // OutPlace Sorting  AND  Stable Sorting
 
 // Draw Backs : 
-// 1. It is Only Applicable For Positive Integers And not Applicable For Floating values.
+// 1. It is Only Applicable For Positive Integers And not Applicable For Floating values And Negative Integers.
 // 2. And It is Not Apllicable For Array  which is Having Range Capcity as Square of Capacity of Original Array.
 // 3.It Is Not Efficient Long Range of Elements For Small Capacity of Array. Ex : a[5]={100,200,300,400,500};   
 

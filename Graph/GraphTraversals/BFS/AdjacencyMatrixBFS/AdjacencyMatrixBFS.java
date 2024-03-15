@@ -1,4 +1,4 @@
-package Graph.GraphTraversals.BFS;
+package Graph.GraphTraversals.BFS.AdjacencyMatrixBFS;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;

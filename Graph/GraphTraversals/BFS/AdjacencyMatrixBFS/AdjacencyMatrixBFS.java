@@ -51,7 +51,7 @@ class Graph{
 
     }
 
-    public void BFS(GraphNode a){
+    private void BFS(GraphNode a){
 
         Queue<GraphNode> q =new LinkedList<>();
         q.add(a);
@@ -69,6 +69,42 @@ class Graph{
                     x.visited=true;
                 }
             }
+        }
+    }
+
+    public void BFS(){
+
+        for(GraphNode x :nodeList){
+
+            if(!x.visited)
+            BFS(x);
+
+        }
+    }
+
+    public void display(){
+
+        System.out.print("    ");
+
+        for(GraphNode x :nodeList){
+
+            System.out.print(x.data+" ");
+
+        }
+
+        System.out.println();
+
+        for(int i=0;i<matrix.length;i++){
+
+            System.out.print(nodeList.get(i).data+" : ");
+
+            for(int j=0;j<matrix[i].length;j++){
+
+                System.out.print(matrix[i][j]+" ");
+
+            }
+
+            System.out.println();
         }
     }
 
@@ -103,7 +139,10 @@ public class AdjacencyMatrixBFS {
         GM.AddEdges(4, 1);
         GM.AddEdges(4, 3);
 
-        GM.BFS(nodeList.get(0));
+        GM.display();
+
+        System.out.println("BFS TRAVERSAL :");
+        GM.BFS();
         
     }
     

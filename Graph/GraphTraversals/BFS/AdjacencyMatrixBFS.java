@@ -5,9 +5,9 @@ import java.util.Queue;
 
 class GraphNode{
 
-    String data;
-    int index;
-    boolean visited;
+    public String data;
+    public int index;
+    public boolean visited;
 
     public GraphNode(String n,int i){
         data=n;
@@ -19,8 +19,8 @@ class GraphNode{
 
 class Graph{
 
-    ArrayList<GraphNode> nodeList;
-    int matrix[][];
+    private ArrayList<GraphNode> nodeList;
+    private int matrix[][];
 
     public Graph(ArrayList<GraphNode> nodeList){
 

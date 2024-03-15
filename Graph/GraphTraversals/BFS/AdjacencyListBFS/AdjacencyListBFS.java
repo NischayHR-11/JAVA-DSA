@@ -36,7 +36,7 @@ class Graph{
 
     }
 
-    public void BFS(GraphNode a){
+    private void BFS(GraphNode a){
 
         Queue<GraphNode> q=new LinkedList<>();
 
@@ -54,6 +54,29 @@ class Graph{
                 }
             }
 
+        }
+    }
+
+    public void BFS(){
+
+        for(GraphNode x : nodeList){
+
+            if(!x.visited)
+            BFS(x);
+        }
+    }
+
+    public void display(){
+
+        for(GraphNode x :nodeList){
+
+            System.out.print(x.data+" : ");
+
+            for(GraphNode y :x.neighbours){
+
+                System.out.print(y.data+" ");
+            }
+            System.out.println();
         }
     }
 }
@@ -81,7 +104,10 @@ public class AdjacencyListBFS {
         GL.AddEdges(2, 3);
         GL.AddEdges(3, 4);
 
-        GL.BFS(nodeList.get(0));
+        GL.display();
+
+        System.out.println("BFS TRAVERSAL :");
+        GL.BFS();
         
     }
     

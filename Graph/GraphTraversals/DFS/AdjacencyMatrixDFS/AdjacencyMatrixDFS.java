@@ -1,4 +1,4 @@
-package Graph.GraphTraversals.DFS;
+package Graph.GraphTraversals.DFS.AdjacencyMatrixDFS;
 import java.util.*;
 
 class GraphNode{

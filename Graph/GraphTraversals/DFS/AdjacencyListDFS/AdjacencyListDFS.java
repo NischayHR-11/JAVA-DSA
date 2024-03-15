@@ -1,6 +1,5 @@
-package Graph.GraphTraversals.DFS;
+package Graph.GraphTraversals.DFS.AdjacencyListDFS;
 import java.util.*;
-
 class GraphNode{
 
     public String data;

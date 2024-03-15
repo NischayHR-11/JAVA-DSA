@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 class GraphNode{
 
-    String data;
-    int index;
+    public String data;
+    public int index;
 
     GraphNode(String n,int i){
 
@@ -17,8 +17,8 @@ class GraphNode{
 
 class Graph{
 
-    ArrayList<GraphNode>nodeList;
-    int matrix[][];
+    private ArrayList<GraphNode>nodeList;
+    private int matrix[][];
 
     public Graph(ArrayList<GraphNode> nodeList){
 

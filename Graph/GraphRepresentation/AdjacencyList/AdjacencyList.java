@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 class GraphNode{
 
-    String data;
-    int index;
-    ArrayList<GraphNode>neighbour;
+    public String data;
+    public int index;
+    public ArrayList<GraphNode>neighbour;
 
     GraphNode(String data,int i){
 
@@ -19,7 +19,7 @@ class GraphNode{
 
 class Graph{
 
-    ArrayList<GraphNode> nodeList;
+    private ArrayList<GraphNode> nodeList;
 
     public Graph(ArrayList<GraphNode> nodeList){
 

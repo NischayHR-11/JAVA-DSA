@@ -55,10 +55,11 @@ class Graph{
 
         Queue<GraphNode> q =new LinkedList<>();
         q.add(a);
+        a.visited=true;
+        
         while(!q.isEmpty()){
 
             GraphNode cur=q.remove();
-            cur.visited=true;
             System.out.print(cur.data+" ");
             ArrayList<GraphNode> neighbours=getNeighbours(cur);
             for(GraphNode x :neighbours){

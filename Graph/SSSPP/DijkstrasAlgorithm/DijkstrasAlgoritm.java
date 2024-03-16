@@ -4,6 +4,8 @@ import java.util.*;
 
 // Draw Back : Not Applicable For Negative Weighted Graphs .
 
+// Time Complexity : O(V^2); {Vertices}       Space Complexity : O(V) ; {Vertices}
+
 class WeightedGraphNode implements Comparable<WeightedGraphNode>{
 
     public String data;

@@ -8,6 +8,8 @@ import java.util.*;
 
 // Single Source Shortest Path Problem.
 
+// It Is Not Applicable For Weighted Graphs .
+
 class GraphNode{
 
     public String data;

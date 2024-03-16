@@ -129,15 +129,9 @@ public class AdjacencyMatrixBFS {
         GM.AddEdges(0, 1);
         GM.AddEdges(0, 2);
         GM.AddEdges(0, 3);
-        GM.AddEdges(1, 0);
         GM.AddEdges(1, 4);
-        GM.AddEdges(2, 0);
         GM.AddEdges(2, 3);
-        GM.AddEdges(3, 0);
-        GM.AddEdges(3, 2);
         GM.AddEdges(3, 4);
-        GM.AddEdges(4, 1);
-        GM.AddEdges(4, 3);
 
         GM.display();
 

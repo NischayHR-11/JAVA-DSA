@@ -48,7 +48,7 @@ class Graph{
         System.out.print(node.data +" ");
     }
 
-    public void BFS_SSSSPP(GraphNode node){
+    public void BFS_SSSPP(GraphNode node){
 
         Queue<GraphNode> q=new LinkedList<>();
 
@@ -118,7 +118,7 @@ public class AdjacencyListSSSPP {
         GL.display();
 
         System.out.println("SSSPP IF 'A' IS SOURCE :");
-        GL.BFS_SSSSPP(nodeList.get(0));
+        GL.BFS_SSSPP(nodeList.get(0));
     }
     
 }

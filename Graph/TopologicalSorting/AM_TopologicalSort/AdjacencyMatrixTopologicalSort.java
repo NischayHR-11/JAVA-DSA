@@ -11,7 +11,7 @@ class GraphNode{
     public int index;
     public boolean visited;
 
-    GraphNode(String n,int i){
+    public GraphNode(String n,int i){
 
         data=n;
         index=i;
@@ -45,7 +45,7 @@ class Graph{
 
     }
 
-    public ArrayList<GraphNode> getneighbours(GraphNode node){
+    private ArrayList<GraphNode> getneighbours(GraphNode node){
 
         ArrayList <GraphNode> neighbours =new ArrayList<>();
 

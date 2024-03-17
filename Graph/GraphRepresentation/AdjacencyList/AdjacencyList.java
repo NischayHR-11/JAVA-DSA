@@ -8,7 +8,7 @@ class GraphNode{
     public int index;
     public ArrayList<GraphNode>neighbour;
 
-    GraphNode(String data,int i){
+    public GraphNode(String data,int i){
 
         this.data=data;
         index=i;

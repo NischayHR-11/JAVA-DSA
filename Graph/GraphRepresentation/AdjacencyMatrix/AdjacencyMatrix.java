@@ -8,7 +8,7 @@ class GraphNode{
     public String data;
     public int index;
 
-    GraphNode(String n,int i){
+    public GraphNode(String n,int i){
 
         data=n;
         index=i;

@@ -16,7 +16,7 @@ class GraphNode{
     public boolean visited;
     public GraphNode parent;
 
-    GraphNode(String n,int i){
+    public GraphNode(String n,int i){
 
         data=n;
         index=i;

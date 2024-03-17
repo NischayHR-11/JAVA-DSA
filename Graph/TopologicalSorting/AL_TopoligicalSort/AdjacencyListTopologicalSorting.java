@@ -9,10 +9,10 @@ class GraphNode{
 
     public String data;
     public int index;
-    boolean visited;
+    public boolean visited;
     public ArrayList<GraphNode>neighbours;
 
-    GraphNode(String data,int i){
+    public GraphNode(String data,int i){
 
         this.data=data;
         index=i;

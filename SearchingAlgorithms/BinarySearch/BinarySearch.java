@@ -1,3 +1,4 @@
+package SearchingAlgorithms.BinarySearch;
 
 // Time Complexity : O(log(n));
 

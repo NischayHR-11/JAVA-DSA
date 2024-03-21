@@ -1,4 +1,3 @@
-
 class Circularqueue{
 
     private int front,rear;
@@ -72,20 +71,17 @@ class Circularqueue{
     }
 }
 
-
-
-
-class CircularQueue{
-
+public class CircularQueue {
+    
     public static void main(String[] args) {
+        
 
-        Circularqueue q =new Circularqueue(5);
+        Circularqueue q=new Circularqueue(5);
         q.enqueue(1);
         q.enqueue(2);
         q.enqueue(3);
         q.enqueue(4);
         q.enqueue(5);
         q.enqueue(6);
-        
     }
 }

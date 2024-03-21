@@ -1,4 +1,4 @@
-package Queue.Array;
+package Queue.QueueImplementation.Array;
 
 class circularqueue{
     public int []arr;

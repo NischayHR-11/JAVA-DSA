@@ -1,4 +1,4 @@
-package Queue.LinkedLIst;
+package Queue.QueueImplementation.LinkedLIst;
 
 class node{
     public int val;

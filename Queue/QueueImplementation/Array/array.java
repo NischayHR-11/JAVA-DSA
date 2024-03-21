@@ -1,4 +1,4 @@
-package Queue.Array;
+package Queue.QueueImplementation.Array;
 
 class queue{
     public int []arr;

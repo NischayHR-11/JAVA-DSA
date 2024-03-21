@@ -1,4 +1,3 @@
-package Queue.LinkedLIst;
 
 class node{
     public int val;

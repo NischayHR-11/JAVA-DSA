@@ -2,18 +2,18 @@ package Queue.DoubleEndedQueue;
 
 class queue{
 
-    int front,rear;
-    int size;
-    int a[];
+    private int front,rear;
+    private int size;
+    private int a[];
 
-    queue(int size){
+    public queue(int size){
 
         front=rear=-1;
         this.size=size;
         a=new int[size];
     }
 
-    void InsertAtFront(int val){
+    public void InsertAtFront(int val){
 
         if(front>0 && front<rear){
              
@@ -30,7 +30,7 @@ class queue{
         System.out.println("INSERT AT FRONT NOT POSSIBLE !!");
     }
 
-    void InsertAtRear(int val){
+    public void InsertAtRear(int val){
 
         if(rear==size-1){
             System.out.println("INSERT AT REAR NOT POSSIBLE !! QUEUE IS FULL");
@@ -44,7 +44,7 @@ class queue{
         a[++rear]=val;
     }
 
-    int DeleteAtFront(){
+    public int DeleteAtFront(){
 
         if(front==-1 && rear==-1){
 
@@ -63,7 +63,7 @@ class queue{
         return n;
     }
 
-    int DeleteAtRear(){
+    public int DeleteAtRear(){
 
         if(front ==-1 && rear==-1){
             System.out.println("DELETE AT REAR NOT POSSIBLE !! QUEUE IS EMPTY");
@@ -83,7 +83,7 @@ class queue{
         return n;
     }
 
-    void display(){
+    public void display(){
 
         for(int i=front;i<=rear;i++){
 

@@ -2,11 +2,11 @@ package Queue.PriorityQueue.Design2;
 
 class queue{
 
-    int front,rear;
-    int size;
-    int a[];
+    private int front,rear;
+    private int size;
+    private int a[];
 
-    queue(int size){
+   public queue(int size){
 
         front=rear=-1;
         this.size=size;
@@ -14,7 +14,7 @@ class queue{
 
     }
 
-    void enqueue(int val){
+   public void enqueue(int val){
 
         if(rear==size-1){
 
@@ -29,7 +29,7 @@ class queue{
 
     }
 
-    int  dequeue(){
+    public int  dequeue(){
 
         if(front==-1 && rear==-1){
 
@@ -67,7 +67,7 @@ class queue{
         return n;
     }
 
-    void display(){
+    public void display(){
 
         for(int i=front;i<=rear;i++){
 

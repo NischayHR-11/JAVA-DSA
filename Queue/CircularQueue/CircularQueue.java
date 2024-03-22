@@ -2,11 +2,11 @@ package Queue.CircularQueue;
 
 class queue{
 
-    int front,rear;
-    int size;
-    int a[];
+    private int front,rear;
+    private int size;
+    private int a[];
 
-    queue(int size){
+    public queue(int size){
 
         front=rear=-1;
         this.size=size;
@@ -14,7 +14,7 @@ class queue{
 
     }
 
-    void enqueue(int val){
+    public void enqueue(int val){
 
         if((rear+1)%size==front){
 
@@ -30,7 +30,7 @@ class queue{
         a[rear]=val;
     }
 
-    int dequeue(){
+    public int dequeue(){
 
         if(rear ==-1 && front==-1){
             System.out.println("DEQUEUE NOT POSSIBLE !! QUEUE IS EMPTY");
@@ -49,7 +49,7 @@ class queue{
 
     }
 
-    int peek(){
+    public int peek(){
       
         if(rear ==-1 && front==-1){
             System.out.println("DEQUEUE NOT POSSIBLE !! QUEUE IS EMPTY");
@@ -60,7 +60,7 @@ class queue{
     }
 
 
-    void display(){
+    public void display(){
 
         int i =front;
 

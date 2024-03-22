@@ -1,9 +1,9 @@
 package Queue.QueueImplementation.Array;
 
 class queue{
-    public int []arr;
-    public int topofqueue;
-    public int beginingofqueue;
+    private int []arr;
+    private int topofqueue;
+    private int beginingofqueue;
    
     public queue(int n){
         arr=new int[n];

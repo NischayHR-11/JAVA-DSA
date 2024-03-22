@@ -6,9 +6,10 @@ class node{
 }
 
 class linkedlist{
- public node head;
- public node tail;
- public int size;
+    
+ private node head;
+ private node tail;
+ private int size;
 
 
     public boolean isempty(){

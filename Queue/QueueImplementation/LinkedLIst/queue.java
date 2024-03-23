@@ -33,6 +33,7 @@ class linkedlist{
             tail.next=newnode;
             tail=newnode;
         }
+        size++;
         System.out.println("ELEMENT INSERTED SUCCESSFULLY..");
 
     }
@@ -40,9 +41,11 @@ class linkedlist{
     public int dequeue(){
         if(isempty()){
             System.out.println("QUEUE IS EMPTY!!");
+            return -1;
         }
         int n=head.val;
         head=head.next;
+        size--;
         return n;
     }
 

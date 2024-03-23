@@ -74,7 +74,7 @@ class stack{
         return 'L';
     }
 
-    public void InfixToPost(String s,stack s1){
+    public String InfixToPost(String s,stack s1){
 
         String post="";
 
@@ -104,7 +104,71 @@ class stack{
             post=post+s1.pop();
         }
 
-        System.out.println("POSTFIX :"+post);
+        System.out.println("POSTFIX EXPRESSION :"+post);
+
+        return post;
+    }
+
+    public int Evaluation(stack s,String post){
+
+        int res=0;
+
+        for(int i=0;i<post.length();i++){
+
+        if(post.charAt(i)>='0'&&post.charAt(i)<='9'){
+            s.push((char) (post.charAt(i)-'0'));
+
+        }else{
+
+            int op2=s.pop();
+            int op1=s.pop();
+
+            switch (post.charAt(i)) {
+
+                case '^':
+
+                    res=op1^op2;
+                    s.push(((char)res));
+                    break;
+
+                case '/':
+
+                    res=op1/op2;
+                    s.push(((char)res));
+                    break;
+
+                case '*':
+
+                    res=op1*op2;
+                    s.push(((char)res));
+                    break;
+
+                case '%':
+
+                    res=op1%op2;
+                    s.push(((char)res));
+                    break;
+
+                case '+':
+
+                    res=op1+op2;
+                    s.push(((char)res));
+                    break;
+
+                case '-':
+
+                    res=op1-op2;
+                    s.push(((char)res));
+                    break;
+
+            }
+
+        }
+    }
+
+    res=(int)s.pop();
+
+    return res;
     }
 
 
@@ -118,10 +182,12 @@ class InfixTOPostfixExpression{
         Scanner sc=new Scanner(System.in);
 
         stack s1=new stack(3);
+        stack s2=new stack(3);
 
         System.out.println("ENTER THE EXPRESSION :");
-        String s2=sc.nextLine();
-        s1.InfixToPost(s2, s1);
+        String s3=sc.nextLine();
+        String postfix=s1.InfixToPost(s3, s1);
+        System.out.println("EVALUATED VALUE : "+s1.Evaluation(s2, postfix));
 
 
     }

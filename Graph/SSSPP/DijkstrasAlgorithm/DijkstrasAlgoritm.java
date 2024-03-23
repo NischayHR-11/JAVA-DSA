@@ -2,7 +2,7 @@ package Graph.SSSPP.DijkstrasAlgorithm;
 
 import java.util.*;
 
-// Draw Back : Not Applicable For Negative Weighted Graphs .
+// Draw Back : Not Applicable For Negative Weighted Loop Graphs .
 
 // Time Complexity : O(V^2); {Vertices}       Space Complexity : O(V) ; {Vertices}
 

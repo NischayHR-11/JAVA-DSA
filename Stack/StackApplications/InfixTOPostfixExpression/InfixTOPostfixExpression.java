@@ -3,22 +3,20 @@ import java.util.Scanner;
 
 class stack{
 
-    int top;
-    int size;
-    char a[];
+    private int top=-1;
+    private int size;
+    private char a[];
 
-    stack(int size){
+    public stack(int size){
 
         this.size=size;
-        top=-1;
-        a=new char[size];
+        a=new char [size];
     }
 
-    void push(char val){
+    public void push(char val){
 
         if(top==size-1){
-
-            System.out.println("STACK IS FULL !! OVERFLOW");
+            System.out.println("NOT POSSIBLE ");
             return;
         }
 
@@ -26,36 +24,40 @@ class stack{
 
     }
 
-    char pop(){
+    public char pop(){
 
         if(top<0){
-
-            System.out.println("STACK IS EMPTY !! UNDERFLOW");
+            System.out.println("not possible");
             return ' ';
         }
 
         return a[top--];
     }
 
-    char peek(){
+    public char peek(){
 
         if(top<0){
-
-            System.out.println("STACK IS EMPTY !! UNDERFLOW");
+            System.out.println("not possible");
             return ' ';
         }
-
 
         return a[top];
 
     }
 
-    int precedency(char s){
+    public void displayStack(){
 
-        if(s=='^' || s=='$')
+        for(int i=top;i>=0;i--){
+            System.out.println(a[i]);
+        }
+    }
+
+    private int precedency(char s){
+
+        if(s=='^')
         return 3;
 
-        if(s=='%'||s=='*'||s=='/')
+        if(s=='*'||s=='/'||s=='%')
         return 2;
 
         if(s=='+'||s=='-')
@@ -64,73 +66,64 @@ class stack{
         return 0;
     }
 
-    char associativity(char s){
+    private char associativity(char s){
 
-        if(s=='^'||s=='$')
+        if(s=='^')
         return 'R';
 
-        else
         return 'L';
     }
 
-    void InfixTOPost(stack s,String infix){
+    public void InfixToPost(String s,stack s1){
 
-        String postfix="";
+        String post="";
 
-        for(int i=0;i<infix.length();i++){
+        for(int i=0;i<s.length();i++){
 
-            if((infix.charAt(i)>='a' && infix.charAt(i)<='z')&&(infix.charAt(i)>='A' && infix.charAt(i)<='Z')&&(infix.charAt(i)>='0' && infix.charAt(i)<='9')){
+            if((s.charAt(i)>='a'&&s.charAt(i)<='z')||(s.charAt(i)>='A'&&s.charAt(i)<='Z')||(s.charAt(i)>='0'&&s.charAt(i)<='9')){
+                post=post+s.charAt(i);
+            }else if(s.charAt(i)=='('){
+                s1.push(s.charAt(i));
+            }else if(s.charAt(i)==')'){
 
-                postfix=postfix+infix.charAt(i);
-
-            }else if(infix.charAt(i)=='('){
-
-                s.push(infix.charAt(i));
-
-            }else if(infix.charAt(i)==')'){
-
-                while(s.top>=0 && s.peek()!='('){
-
-                    postfix=postfix+s.pop();
+                while(s1.top>=0 && s1.peek()!='('){
+                    post=post+s1.pop();
                 }
-
-                s.top--;
+                s1.top--;
             }else{
 
-                while(s.top>=0 && precedency(infix.charAt(i))<=precedency(s.peek()) && associativity(infix.charAt(i))=='L'){
-
-                    postfix=postfix+s.pop();
+                while(s1.top>=0 && precedency(s.charAt(i))<=precedency(s1.peek()) && associativity(s.charAt(i))=='L'){
+                    post=post+s1.pop();
                 }
 
-                s.push(infix.charAt(i));
+                s1.push(s.charAt(i));
             }
         }
 
-        while(s.top>=0){
-
-            postfix=postfix+s.pop();
+        while(s1.top>=0){
+            post=post+s1.pop();
         }
 
-        System.out.println("POSTFIX EXPRESSION : "+postfix);
-
+        System.out.println("POSTFIX :"+post);
     }
 
 
 }
 
-public class InfixTOPostfixExpression {
+class InfixTOPostfixExpression{
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
-
-        Scanner sc =new Scanner(System.in);
-
-        stack s = new stack(50);
-        stack s1=new stack(30);
-
-        System.out.println("ENTER INFIX EXORESSION : ");
-        String s2=sc.nextLine();
-        s.InfixTOPost(s1, s2);
         
+        Scanner sc=new Scanner(System.in);
+
+        stack s1=new stack(3);
+
+        System.out.println("ENTER THE EXPRESSION :");
+        String s2=sc.nextLine();
+        s1.InfixToPost(s2, s1);
+
+
     }
-    
+
 }

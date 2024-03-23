@@ -67,14 +67,6 @@ class stack{
         return 0;
     }
 
-    private char associativity(char s){
-
-        if(s=='^')
-        return 'R';
-
-        return 'L';
-    }
-
     public String InfixToPre(String s2,stack s1){
 
         String Pre ="";

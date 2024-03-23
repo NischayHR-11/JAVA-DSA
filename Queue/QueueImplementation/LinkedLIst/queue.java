@@ -9,8 +9,7 @@ class linkedlist{
     
  private node head;
  private node tail;
- private int size;
-
+ public int size;
 
     public boolean isempty(){
         if(head==null){

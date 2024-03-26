@@ -29,8 +29,8 @@ class Graph{
 
     public void AddEdges(int i,int j){
 
-        matrix[i][j]=1;
-        matrix[j][i]=1;
+        this.matrix[i][j]=1;
+        this.matrix[j][i]=1;
 
     }
 

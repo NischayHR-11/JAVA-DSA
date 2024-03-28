@@ -1,7 +1,7 @@
 package Graph.TopologicalSorting.AL_TopoligicalSort;
 import java.util.*;
 
-// Directed Graph
+// Applicable Only For Directed and Acyclic Graph
 
 // Time Complexity : O(V+E);       Space Complexity : O(V+E); 
 

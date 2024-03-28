@@ -21,7 +21,7 @@ class WeightedGraphNode implements Comparable<WeightedGraphNode>{
         data=name;
         this.index=index;
         visited=false;
-        distance=Integer.MAX_VALUE;
+        distance=Integer.MAX_VALUE/10;
         neighbours=new ArrayList<>();
         wieghtedEdge=new HashMap<>();
 

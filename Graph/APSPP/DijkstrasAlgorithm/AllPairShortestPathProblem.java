@@ -183,7 +183,7 @@ public class AllPairShortestPathProblem {
         for(WeightedGraphNode node :nodeList){
 
         System.out.println("SSSPP FOR SOURCE AS '"+node.data+"' IS : \n");
-        DA.Dijkstras(node);
+        DA.BellManFord(node);
         for(WeightedGraphNode nodes : nodeList){
             nodes.parent=null;
             nodes.distance=Integer.MAX_VALUE/10;

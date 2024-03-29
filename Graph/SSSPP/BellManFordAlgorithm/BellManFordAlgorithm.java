@@ -19,7 +19,7 @@ class WeightedGraphNode{
 
         this.data=data;
         index=i;
-        distance=Integer.MAX_VALUE;
+        distance=Integer.MAX_VALUE/10;
         visited=false;
         neighbours=new ArrayList<>();
         WeightedEdges=new HashMap<>();

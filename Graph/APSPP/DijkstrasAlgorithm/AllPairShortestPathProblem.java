@@ -20,7 +20,7 @@ class WeightedGraphNode implements Comparable<WeightedGraphNode>{
         data=name;
         this.index=index;
         visited=false;
-        distance=Integer.MAX_VALUE;
+        distance=Integer.MAX_VALUE/10;
         neighbours=new ArrayList<>();
         wieghtedEdge=new HashMap<>();
 
@@ -80,7 +80,7 @@ class WeightedGraph{
 
             for(WeightedGraphNode neighbour :cur.neighbours){
 
-                if(q.contains(neighbour)){
+                if(!neighbour.visited){
 
                     if(neighbour.distance > cur.distance+cur.wieghtedEdge.get(neighbour)){
 
@@ -183,7 +183,7 @@ public class AllPairShortestPathProblem {
         for(WeightedGraphNode node :nodeList){
 
         System.out.println("SSSPP FOR SOURCE AS '"+node.data+"' IS : \n");
-        DA.BellManFord(node);
+        DA.Dijkstras(node);
         for(WeightedGraphNode nodes : nodeList){
             nodes.parent=null;
             nodes.distance=Integer.MAX_VALUE/10;

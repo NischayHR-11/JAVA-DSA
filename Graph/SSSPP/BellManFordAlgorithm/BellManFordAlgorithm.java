@@ -3,7 +3,9 @@ import java.util.*;
 
 // Time Complexity : O(VE);           Space Complexity : O(V);
 
-// Negative Cycle Can Be Checked.
+// Negative Weighted Cycle Can Be Checked But cannot be solved by BellmanFord Algorithm.
+
+// Negative Cycle = Total weight of the loop is Negative.
 
 class WeightedGraphNode{
 

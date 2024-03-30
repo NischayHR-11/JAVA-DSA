@@ -81,7 +81,7 @@ class WeightedGraph{
 
             for(WeightedGraphNode neighbour :cur.neighbours){
 
-                if(q.contains(neighbour)){
+                if(!neighbour.visited){
 
                     if(neighbour.distance > cur.distance+cur.wieghtedEdge.get(neighbour)){
 

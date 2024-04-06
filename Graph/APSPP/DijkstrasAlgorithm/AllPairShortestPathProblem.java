@@ -58,6 +58,14 @@ class WeightedGraph{
 
     }
 
+    public void AddUnDirectedEdges(int i,int j,int d){
+
+        nodeList.get(i).neighbours.add(nodeList.get(j));
+        nodeList.get(i).wieghtedEdge.put(nodeList.get(j),d);        
+        nodeList.get(j).neighbours.add(nodeList.get(i));
+        nodeList.get(j).wieghtedEdge.put(nodeList.get(i),d);        
+    }
+
     private  void path(WeightedGraphNode node){
 
         if(node.parent !=null){
@@ -70,17 +78,17 @@ class WeightedGraph{
 
     public void Dijkstras(WeightedGraphNode node){
 
+        node.distance=0;
         PriorityQueue <WeightedGraphNode> q =new PriorityQueue<>();
         q.addAll(nodeList);
-        node.distance=0;
 
         while(!q.isEmpty()){
 
             WeightedGraphNode cur=q.remove();
-
+            
             for(WeightedGraphNode neighbour :cur.neighbours){
 
-                if(!neighbour.visited){
+                if(q.contains(neighbour)){
 
                     if(neighbour.distance > cur.distance+cur.wieghtedEdge.get(neighbour)){
 

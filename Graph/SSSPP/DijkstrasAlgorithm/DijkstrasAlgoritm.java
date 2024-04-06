@@ -71,9 +71,9 @@ class WeightedGraph{
 
     public void Dijkstras(WeightedGraphNode node){
 
+        node.distance=0;
         PriorityQueue <WeightedGraphNode> q =new PriorityQueue<>();
         q.addAll(nodeList);
-        node.distance=0;
 
         while(!q.isEmpty()){
 
@@ -81,7 +81,7 @@ class WeightedGraph{
 
             for(WeightedGraphNode neighbour :cur.neighbours){
 
-                if(!neighbour.visited){
+                if(q.contains(neighbour)){
 
                     if(neighbour.distance > cur.distance+cur.wieghtedEdge.get(neighbour)){
 

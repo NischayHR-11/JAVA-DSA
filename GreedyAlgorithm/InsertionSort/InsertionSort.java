@@ -1,4 +1,4 @@
-package SortingAlgorithms.InPlaceSorting.InsertionSort;
+package GreedyAlgorithm.InsertionSort;
 
 // Time Complexity : O(N^2);        Space Complexity : O(1);
 

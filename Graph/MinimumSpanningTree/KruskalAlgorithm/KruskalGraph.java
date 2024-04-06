@@ -1,6 +1,8 @@
 package Graph.MinimumSpanningTree.KruskalAlgorithm;
 import java.util.*;
 
+// Time Complexity : O( Elog(E) );      Space Complexity : O(V+E);
+
 class DisjointSet{
 
     public ArrayList<WeightedNode> nodeList=new ArrayList<>();
@@ -65,6 +67,7 @@ class DisjointSet{
 
 }
 
+
 class WeightedNode implements Comparable<WeightedNode>{
 
     public String data;
@@ -104,6 +107,7 @@ class WeightedNode implements Comparable<WeightedNode>{
 
 }
 
+
 class UndirectedEdges implements Comparable<UndirectedEdges>{
 
     public WeightedNode first;
@@ -133,14 +137,16 @@ class UndirectedEdges implements Comparable<UndirectedEdges>{
     }
 }
 
+
 class Kruskal{
 
     ArrayList<WeightedNode> nodeList ;
-    ArrayList<UndirectedEdges> EdgeList =new ArrayList<>();
+    ArrayList<UndirectedEdges> EdgeList;
 
     Kruskal(ArrayList<WeightedNode> nodeList){
 
         this.nodeList=nodeList;
+        EdgeList=new ArrayList<>();
     }
 
     void AddUnDirectedEdges(int i,int i2,int dis){
@@ -175,9 +181,8 @@ class Kruskal{
 
     }
     
-
-
 }
+
 
 public class KruskalGraph {
 
@@ -202,13 +207,6 @@ public class KruskalGraph {
 
         System.out.println("KRUSKAL ALGORITHM : ");
         graph.kruskal();
-        
-
-
-
-        
-
-
 
     }
     

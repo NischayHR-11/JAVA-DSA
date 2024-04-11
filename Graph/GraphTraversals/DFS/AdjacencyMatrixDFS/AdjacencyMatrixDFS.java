@@ -96,12 +96,15 @@ class Graph{
             GraphNode cur =s.pop();
             System.out.print(cur.data+" ");
             ArrayList<GraphNode> neighbours=getNeighbours(cur);
+            Collections.reverse(neighbours);
+            
             for(GraphNode x :neighbours){
 
                 if(!x.visited){
                     s.push(x);
                     x.visited=true;
                 }
+
             }
 
         }

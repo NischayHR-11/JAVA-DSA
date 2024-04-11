@@ -80,6 +80,8 @@ class Graph{
             GraphNode cur =s.pop();
             System.out.print(cur.data + " ");
 
+            Collections.reverse(cur.neighbours);
+
             for(GraphNode x :cur.neighbours){
 
                 if(!x.visited){

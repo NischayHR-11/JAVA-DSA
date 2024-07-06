@@ -1,8 +1,9 @@
-// Time Complexity : O(n^2);          Space Complexity : O(1);
+package SortingAlgorithms.InPlaceSorting.shellsort;
 
+// Time Complexity : O(n^2);          Space Complexity : O(1);
 // InPlace Sorting   AND  UnStable Sorting
 
-public class ShellSort {
+public class shellsort {
 
     public static void ShellSorting(int a[]){
 

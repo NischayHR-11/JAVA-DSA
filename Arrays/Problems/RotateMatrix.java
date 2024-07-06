@@ -1,3 +1,5 @@
+package Problems;
+
 public class RotateMatrix {
     
     public static void Rotatematrix(int arr[][]){

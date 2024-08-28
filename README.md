@@ -1,7 +1,3 @@
-Here's the revised README without direct links to individual files, focusing only on directories:
-
----
-
 # JAVA-DSA
 
 This repository contains Java implementations of various Data Structures and Algorithms (DSA). The code is organized in a way that makes it easy to find and understand each concept.

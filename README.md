@@ -46,13 +46,13 @@ JAVA-DSA
 
 ### Directory Details
 
-- **[`src/main/java`](src/main/java)**: This directory contains all the main Java source code files.
-  - **[`com/example/datastructures`](src/main/java/com/example/datastructures)**: Contains implementations of various data structures.
-  - **[`com/example/algorithms`](src/main/java/com/example/algorithms)**: Contains implementations of various algorithms.
+- **src/main/java**: This directory contains all the main Java source code files.
+  - **com/example/datastructures**: Contains implementations of various data structures.
+  - **com/example/algorithms**: Contains implementations of various algorithms.
   
-- **[`src/test/java`](src/test/java)**: This directory contains all the test cases for the data structures and algorithms.
-  - **[`com/example/datastructures`](src/test/java/com/example/datastructures)**: Contains unit tests for the data structures.
-  - **[`com/example/algorithms`](src/test/java/com/example/algorithms)**: Contains unit tests for the algorithms.
+- **src/test/java**: This directory contains all the test cases for the data structures and algorithms.
+  - **com/example/datastructures**: Contains unit tests for the data structures.
+  - **com/example/algorithms**: Contains unit tests for the algorithms.
 
 ## How to Run
 
@@ -101,7 +101,3 @@ For any questions or feedback, please contact:
 - Name: Nischay H R
 - Email: [nischayhr11@gmail.com](mailto:nischayhr11@gmail.com)
 - GitHub: [NischayHR-11](https://github.com/NischayHR-11)
-
----
-
-This version of the README focuses on the overall directory structure, omitting links to individual files.

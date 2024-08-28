@@ -1,3 +1,7 @@
+Here's the revised README without direct links to individual files, focusing only on directories:
+
+---
+
 # JAVA-DSA
 
 This repository contains Java implementations of various Data Structures and Algorithms (DSA). The code is organized in a way that makes it easy to find and understand each concept.
@@ -33,27 +37,13 @@ JAVA-DSA
 │   │       └── com
 │   │           └── example
 │   │               ├── datastructures
-│   │               │   ├── Array.java
-│   │               │   ├── LinkedList.java
-│   │               │   ├── Stack.java
-│   │               │   ├── Queue.java
-│   │               │   └── ...
 │   │               └── algorithms
-│   │                   ├── Sorting.java
-│   │                   ├── Searching.java
-│   │                   ├── DynamicProgramming.java
-│   │                   └── ...
 │   └── test
 │       └── java
 │           └── com
 │               └── example
 │                   ├── datastructures
-│                   │   ├── ArrayTest.java
-│                   │   ├── LinkedListTest.java
-│                   │   └── ...
 │                   └── algorithms
-│                       ├── SortingTest.java
-│                       └── ...
 ├── README.md
 └── pom.xml
 ```
@@ -62,25 +52,11 @@ JAVA-DSA
 
 - **[`src/main/java`](src/main/java)**: This directory contains all the main Java source code files.
   - **[`com/example/datastructures`](src/main/java/com/example/datastructures)**: Contains implementations of various data structures.
-    - **[`Array.java`](src/main/java/com/example/datastructures/Array.java)**: Implementation of array-based operations.
-    - **[`LinkedList.java`](src/main/java/com/example/datastructures/LinkedList.java)**: Implementation of linked list.
-    - **[`Stack.java`](src/main/java/com/example/datastructures/Stack.java)**: Implementation of stack.
-    - **[`Queue.java`](src/main/java/com/example/datastructures/Queue.java)**: Implementation of queue.
-    - ... (Include other data structure implementations here)
   - **[`com/example/algorithms`](src/main/java/com/example/algorithms)**: Contains implementations of various algorithms.
-    - **[`Sorting.java`](src/main/java/com/example/algorithms/Sorting.java)**: Contains sorting algorithms like QuickSort, MergeSort, etc.
-    - **[`Searching.java`](src/main/java/com/example/algorithms/Searching.java)**: Contains searching algorithms like Binary Search, Linear Search, etc.
-    - **[`DynamicProgramming.java`](src/main/java/com/example/algorithms/DynamicProgramming.java)**: Contains examples of dynamic programming algorithms.
-    - ... (Include other algorithm implementations here)
   
 - **[`src/test/java`](src/test/java)**: This directory contains all the test cases for the data structures and algorithms.
   - **[`com/example/datastructures`](src/test/java/com/example/datastructures)**: Contains unit tests for the data structures.
-    - **[`ArrayTest.java`](src/test/java/com/example/datastructures/ArrayTest.java)**: Tests for array operations.
-    - **[`LinkedListTest.java`](src/test/java/com/example/datastructures/LinkedListTest.java)**: Tests for linked list operations.
-    - ... (Include other test files for data structures here)
   - **[`com/example/algorithms`](src/test/java/com/example/algorithms)**: Contains unit tests for the algorithms.
-    - **[`SortingTest.java`](src/test/java/com/example/algorithms/SortingTest.java)**: Tests for sorting algorithms.
-    - ... (Include other test files for algorithms here)
 
 ## How to Run
 
@@ -132,4 +108,4 @@ For any questions or feedback, please contact:
 
 ---
 
-This README now includes links that allow users to navigate through the various directories directly. Make sure to update the README as you add new files or directories!
+This version of the README focuses on the overall directory structure, omitting links to individual files.
